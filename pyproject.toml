@@ -1,0 +1,33 @@
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/sampleproject"
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "demo_patrikspiess"
+version = "0.1.0"
+description = "Demo project to try the package deployment"
+authors = ["Patrik Spiess <patrik.spiess@bluewin.ch>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/patrikspiess/demo_patrikspiess"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/patrikspiess/demo_patrikspiess/issues"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+demo = "src.demo_patrikspiess.write:main"

@@ -1,2 +1,3 @@
 # demo_patrikspiess
-Demo project to try a package development
+
+Demo project to try the package deployment
