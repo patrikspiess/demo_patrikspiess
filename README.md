@@ -44,4 +44,8 @@ Option -i is only needed because the packeg has to be loaded from the test PyPI 
 
 If the package is already installed you may use the option -U to do an upgrade.
 
+# CI/CD
 
+I use tox with Github actions. Tox ist configured in the pyproject.toml file as legacy_tox_ini. See https://tox.wiki/en/latest/example/basic.html.
+
+For using Github actions you define your configuration in ./.github/workflows/*.yaml. Example for pylint is given there. In the Github actions I use the preparfed tox environments. So I may the same tests localy.
