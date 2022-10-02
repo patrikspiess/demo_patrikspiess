@@ -1,14 +1,48 @@
 # demo_patrikspiess
 
-Demo project to try the package deployment
+Demo project to try the package deployment. It uses poetry, tox and Github actions. It is not meant do do anything useful.
+
+# Contents
+
+- [Reference](#reference)
+- [Pre Build](#pre-build)
+  - [CHANGELOG.md](#changelogmd)
+  - [Tests](#tests)
+  - [Version Bump](#version-bumb)
+- [Building the Package](#building-the-package)
+- [Upload (publish) the Package](#upload-publish-the-package)
+- [Package Installation](#package-installation)
+  - [Upgrade](#upgrade)
+- [CI/CD with Github Actions](#cicd-with-github-actions)
 
 # Reference
 
 This project is a demo project from the **Packaging Python Projects** Tutorial which can be found at https://packaging.python.org/en/latest/tutorials/packaging-projects/#
 
-Other than in the above tutorial I use poetry as a package manager. Therefore some of the confgiuration or commands differ from what you see in the tutorial.
+Other than in the tutorial mentioned above I use poetry as a package manager. Therefore some of the configuration or commands differ from what you see in the tutorial.
 
-# build
+Additionally I use some test and build features to try out some workflow/actions stuff.
+
+# Pre Build
+
+## CHANGELOG.md
+
+For every change update the CHANEGLOG.md to reflect the news. Users and contributors need to know about changes in the project. When bumping the version the CHANGELOG.md gets a new section with the new version and the [Unreleased] section is cleard for the next upcoming chnages.
+## Tests
+Before I build, the tests run with tox should be successful:
+
+    poetry run tox
+
+## Version Bumb
+
+Every released package should have its unique version number. Therefore a version bump has to be done with poetry:
+
+    poetry version [majior, minor, patch]
+
+And also the \_\_version\_\_ = "x.x.x" in the \_\_init\_\_.py of the modules root folder should be changed to the same resulting number.
+(Maybe someone can give me a useful Github action to automatically update the \_\_version\_\_ in \_\_init\_\_.py when the version in pyproject.toml has changes)
+
+# Building the Package
 
 According to https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives I build the distribution packages but I use poetry.
 
@@ -16,7 +50,7 @@ According to https://packaging.python.org/en/latest/tutorials/packaging-projects
 
 This builds the packges as described in the tutorial. The packages are stored in the folder ./dist. This folder should be ignored in .gitignore
 
-# package upload
+# Upload (publish) the Package
 
 Instead of using twine I use poetry to upload (publish) the package to PyPI.
 
@@ -32,7 +66,7 @@ I use the test PyPI repository because it's best practice for tests like this.
 
 If you use an API token for authentication use *__token__* as username and the token as password.
 
-# package installation
+# Package Installation
 
 After the package is uploaded to PyPI you can install it with the following command:
 
@@ -44,7 +78,7 @@ Option -i is only needed because the packeg has to be loaded from the test PyPI 
 
 If the package is already installed you may use the option -U to do an upgrade.
 
-# CI/CD
+# CI/CD with Github Actions
 
 I use tox with Github actions. Tox ist configured in the pyproject.toml file as legacy_tox_ini. See https://tox.wiki/en/latest/example/basic.html.
 
