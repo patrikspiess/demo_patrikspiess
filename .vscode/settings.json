@@ -1,0 +1,11 @@
+{
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": false,
+    "[python]": {
+        "gitlens.codeLens.symbolScopes": [
+            "!Module"
+        ],
+        "editor.formatOnSave": true,
+        "editor.wordBasedSuggestions": false
+    }
+}
