@@ -28,13 +28,14 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
+rich = "^12.6.0"
 
 [tool.poetry.group.dev.dependencies]
 tox = "^3.26.0"
 pylint = "^2.15.3"
 
 [tool.poetry.scripts]
-demops = "demo_patrikspiess.write:main"
+demops = "demo_patrikspiess.main:main"
 
 [tool.tox]
 legacy_tox_ini = """[tox]
