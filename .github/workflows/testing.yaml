@@ -22,11 +22,13 @@ jobs:
         poetry install --no-interaction --no-ansi
   pylint:
     needs: build
+    steps:
     - name: Analysing the code with pylint
       run: |
         poetry run tox -e pylint
   mypy:
     needs: build
+    steps:
     - name: Type checking with mypy
       run: |
         poetry run tox -e mypy
