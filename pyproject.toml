@@ -1,5 +1,5 @@
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.2.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
@@ -33,19 +33,32 @@ rich = "^12.6.0"
 [tool.poetry.group.dev.dependencies]
 tox = "^3.26.0"
 pylint = "^2.15.3"
+mypy = "^0.982"
 
 [tool.poetry.scripts]
 demops = "demo_patrikspiess.main:main"
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+strict = true
 
 [tool.tox]
 legacy_tox_ini = """[tox]
 
 isolated_build = True
-envlist = pylint
+envlist = pylint, mypy
 
 [testenv:pylint]
 description = Code analysis with pylint
 skip_install = True
 deps = pylint >= 2.15.3
 commands = pylint {posargs} demo_patrikspiess
+
+[testenv:mypy]
+description = Static type checking with mypy
+skip_install = True
+deps = mypy >= 0.982
+commands = mypy {posargs} demo_patrikspiess
+
 """

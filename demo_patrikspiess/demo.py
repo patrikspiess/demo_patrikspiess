@@ -12,7 +12,7 @@ from .exceptions import DemoException
 class Demo:
     """A demo class"""
 
-    def __init__(self, params: List[str]):
+    def __init__(self, params: List[str]) -> None:
         """initialize the thing"""
         if len(params) > 1:
             if params[1] == "1":
@@ -37,7 +37,7 @@ class Demo:
         help_text = (
             "This is the help screen for demo_patrikspiess\n"
             "You already found that you may start the tool with 'demops'. But to invoke some more "
-            "fancy actions you may add a parameter. here we show you what parameters are valid:"
+            "fancy actions you may add a parameter. Here we show you what parameters are valid:"
             "\n\n"
             "1 : print something\n"
             "2 : Raise an exception"
