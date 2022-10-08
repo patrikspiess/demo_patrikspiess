@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.1.4] - 2022.10.02
+
+### Added
+
+- help screen if no parameter is given
+- DemoException
+- Parameter with sys.argv to execute some examples (maybe in future typer is used)
+- .pylintrc to control pylint
+
+## [0.1.4] - 2022.10.02
 ### Changed
 
 - Update README.md (add a 'Contents' and a 'Git Tag' section and fix lots of typos)
