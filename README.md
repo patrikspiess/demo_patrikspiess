@@ -27,7 +27,7 @@ Additionally I use some test and build features to try out some workflow/actions
 
 ## CHANGELOG.md
 
-For every change update the [CHANEGLOG.md](CHANEGLOG.md) to reflect the news. Users and contributors need to know about changes in the project. When bumping the version the [CHANEGLOG.md](CHANEGLOG.md) gets a new section with the new version and the [Unreleased] section is cleard for the next upcoming chnages.
+For every change update the [CHANGELOG.md](CHANGELOG.md) to reflect the news. Users and contributors need to know about changes in the project. When bumping the version the [CHANGELOG.md](CHANGELOG.md) gets a new section with the new version and the [Unreleased] section is cleared for the next upcoming changes.
 ## Tests
 Before I build, the tests run with tox should be successful:
 
@@ -37,10 +37,20 @@ Before I build, the tests run with tox should be successful:
 
 Every released package should have its unique version number. Therefore a version bump has to be done with poetry:
 
-    poetry version [majior, minor, patch]
+    poetry version [major, minor, patch]
 
 And also the \_\_version\_\_ = "x.x.x" in the \_\_init\_\_.py of the modules root folder should be changed to the same resulting number.
 (Maybe someone can give me a useful Github action to automatically update the \_\_version\_\_ in \_\_init\_\_.py when the version in pyproject.toml has changed)
+
+## Git Tag
+
+Before committing all the changes for a release a Git tag with the corresponding version number has to be created. E.g. if you wish to release version 9.8.7 you create tag with the following command:
+
+    git tag v9.8.7
+
+Later you may list all the tags:
+
+    git tag --list
 
 # Building the Package
 
@@ -48,7 +58,7 @@ According to https://packaging.python.org/en/latest/tutorials/packaging-projects
 
     poetry build
 
-This builds the packges as described in the tutorial. The packages are stored in the folder ./dist. This folder should be ignored in .gitignore
+This builds the package as described in the tutorial. The package is stored in the folder ./dist. This folder should be ignored in .gitignore
 
 # Upload (publish) the Package
 
@@ -72,7 +82,7 @@ After the package is uploaded to PyPI you can install it with the following comm
 
     pip install -i https://test.pypi.org/simple/ demo-patrikspiess
 
-Option -i is only needed because the packeg has to be loaded from the test PyPI repository. For official PyPI packages the -i option may be omited.
+Option -i is only needed because the package has to be loaded from the test PyPI repository. For official PyPI packages the -i option may be omitted.
 
 ## Upgrade
 
@@ -82,4 +92,4 @@ If the package is already installed you may use the option -U to do an upgrade.
 
 I use tox with Github actions. Tox ist configured in the pyproject.toml file as legacy_tox_ini. See https://tox.wiki/en/latest/example/basic.html.
 
-For using Github actions you define your configuration in ./.github/workflows/*.yaml. Example for pylint is given there. In the Github actions I use the preparfed tox environments. So I may the same tests localy.
+For using Github actions you define your configuration in ./.github/workflows/*.yaml. Example for pylint is given there. In the Github actions I use the prepared tox environments. So I may the same tests locally.
