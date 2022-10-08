@@ -6,9 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.4] - 2022.10.02
 ### Changed
 
-- Update README.md (add a 'Contents' section and fix some typos)
+- Update README.md (add a 'Contents' and a 'Git Tag' section and fix lots of typos)
 
 ## [0.1.3] - 2022.10.02
 

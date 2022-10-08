@@ -44,9 +44,9 @@ And also the \_\_version\_\_ = "x.x.x" in the \_\_init\_\_.py of the modules roo
 
 ## Git Tag
 
-Before committing all the changes for a release a Git tag with the corresponding version number has to be created. E.g. if you wish to release version 9.8.7 you create tag with the following command:
+Before committing all the changes for a release a Git tag with the corresponding version number has to be created. We always use annotated tags. E.g. if you wish to release version 9.8.7 you create tag with the following command:
 
-    git tag v9.8.7
+    git tag -a v9.8.7 -m "version v9.8.7"
 
 Later you may list all the tags:
 
