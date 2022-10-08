@@ -1,6 +1,6 @@
 # demo_patrikspiess
 
-Demo project to try the package deployment. It uses poetry, tox and Github actions. It is not meant do do anything useful.
+Demo project to try the package deployment. It uses poetry, tox and Github actions. It is not meant to do anything useful.
 
 # Contents
 
@@ -27,7 +27,7 @@ Additionally I use some test and build features to try out some workflow/actions
 
 ## CHANGELOG.md
 
-For every change update the CHANEGLOG.md to reflect the news. Users and contributors need to know about changes in the project. When bumping the version the CHANGELOG.md gets a new section with the new version and the [Unreleased] section is cleard for the next upcoming chnages.
+For every change update the [CHANEGLOG.md](CHANEGLOG.md) to reflect the news. Users and contributors need to know about changes in the project. When bumping the version the [CHANEGLOG.md](CHANEGLOG.md) gets a new section with the new version and the [Unreleased] section is cleard for the next upcoming chnages.
 ## Tests
 Before I build, the tests run with tox should be successful:
 
@@ -40,7 +40,7 @@ Every released package should have its unique version number. Therefore a versio
     poetry version [majior, minor, patch]
 
 And also the \_\_version\_\_ = "x.x.x" in the \_\_init\_\_.py of the modules root folder should be changed to the same resulting number.
-(Maybe someone can give me a useful Github action to automatically update the \_\_version\_\_ in \_\_init\_\_.py when the version in pyproject.toml has changes)
+(Maybe someone can give me a useful Github action to automatically update the \_\_version\_\_ in \_\_init\_\_.py when the version in pyproject.toml has changed)
 
 # Building the Package
 
@@ -64,7 +64,7 @@ Then I can upload the package with the following command:
 
 I use the test PyPI repository because it's best practice for tests like this.
 
-If you use an API token for authentication use *__token__* as username and the token as password.
+If you use an API token for authentication use *\_\_token\_\_* as username and the token itself as password.
 
 # Package Installation
 
