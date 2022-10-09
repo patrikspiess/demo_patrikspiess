@@ -27,3 +27,9 @@ jobs:
     - name: Type checking with mypy
       run: |
         poetry run tox -e mypy
+    - name: Upload mypy report
+      uses: actions/upload-artifact@v3
+      with:
+        name: mypy report
+        path: mypy.xml
+

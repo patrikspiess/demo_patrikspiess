@@ -62,6 +62,6 @@ commands = pylint {posargs} demo_patrikspiess
 description = Static type checking with mypy
 skip_install = True
 deps = mypy >= 0.982
-commands = mypy {posargs} demo_patrikspiess
+commands = mypy {posargs} demo_patrikspiess --junit-xml mypy.xml
 
 """
