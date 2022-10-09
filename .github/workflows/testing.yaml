@@ -4,7 +4,7 @@ run-name: testing workflow invoked by ${{ github.actor }}
 on: [push]
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
