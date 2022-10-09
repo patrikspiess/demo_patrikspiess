@@ -38,6 +38,9 @@ mypy = "^0.982"
 [tool.poetry.scripts]
 demops = "demo_patrikspiess.main:main"
 
+[tool.pylint]
+disable = "import-error"
+
 [tool.mypy]
 python_version = "3.10"
 ignore_missing_imports = true
