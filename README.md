@@ -9,6 +9,7 @@ Demo project to try the package deployment. It uses poetry, tox and Github actio
   - [CHANGELOG.md](#changelogmd)
   - [Tests](#tests)
   - [Version Bump](#version-bumb)
+  - [Git Tag](#git-tag)
 - [Building the Package](#building-the-package)
 - [Upload (publish) the Package](#upload-publish-the-package)
 - [Package Installation](#package-installation)
