@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.10"]
+        python-version: ["3.8", "3.9", "3.10"]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
@@ -21,7 +21,7 @@ jobs:
         curl -sSL https://install.python-poetry.org | python3 -
         poetry config virtualenvs.in-project true
         poetry install --no-interaction --no-ansi
-    - name: Analysing the code with pylint
+    - name: Analyzing the code with pylint
       run: |
         poetry run tox -e pylint
     - name: Type checking with mypy
