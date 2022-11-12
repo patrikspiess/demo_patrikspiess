@@ -114,4 +114,18 @@ Building the documentation is then possible with:
 
     poetry run sphinx-build -b html source build
 
-I do not use the option to build the documentation with `make html` as I prefer to do everything with poetry.
+I do not use the option to build the documentation with `poetry run make html` as I prefer to do everything with poetry. therefore I added a tox env for creating the documentation:
+
+    poetry run tox -e doc
+
+## readthedocs Configuration
+
+For readthedocs being able to create the docs from the github repository I added a .readthedocs.yaml in the root of the project. The important statements are the python version and the requirements file.
+
+Although the package dependencies are managed by poetry, readthedocs needs a classic requirements.txt file. Therefore a tox env was created to generate the requirements.txt into the source directory.
+
+    poetry export --without-hashes --format=requirements.txt --output=source/requirements.txt
+
+run it with
+
+    poetry run tox -e requirements
