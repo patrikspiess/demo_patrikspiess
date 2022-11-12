@@ -51,7 +51,7 @@ strict = true
 legacy_tox_ini = """[tox]
 
 isolated_build = True
-envlist = pylint, mypy
+envlist = pylint, mypy, requirements
 
 [testenv:pylint]
 description = Code analysis with pylint
@@ -64,5 +64,13 @@ description = Static type checking with mypy
 skip_install = True
 deps = mypy >= 0.982
 commands = mypy {posargs} demo_patrikspiess --junit-xml mypy.xml
+
+[testenv:requirements]
+allowlist_externals = poetry
+description = Create a requirements.txt from the Poetry dependencies (used for readthedocs)
+skip_install = True
+output = requirements.txt
+commands = poetry export --without-hashes --format=requirements.txt --output=requirements.txt
+
 
 """
