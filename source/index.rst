@@ -10,6 +10,7 @@ Welcome to demops's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   demops.rst
 
 
 Indices and tables
@@ -18,3 +19,12 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+Demos
+=====
+
+Go to :ref:`demops_title1`
+
+.. autofunction:: demo_patrikspiess.demo.Demo.add_one
+.. autofunction:: io.open

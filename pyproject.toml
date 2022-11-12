@@ -51,7 +51,7 @@ strict = true
 legacy_tox_ini = """[tox]
 
 isolated_build = True
-envlist = pylint, mypy, requirements
+envlist = pylint, mypy, requirements, doc
 
 [testenv:pylint]
 description = Code analysis with pylint
@@ -69,8 +69,12 @@ commands = mypy {posargs} demo_patrikspiess --junit-xml mypy.xml
 allowlist_externals = poetry
 description = Create a requirements.txt from the Poetry dependencies (used for readthedocs)
 skip_install = True
-output = requirements.txt
-commands = poetry export --without-hashes --format=requirements.txt --output=requirements.txt
+commands = poetry export --without-hashes --format=requirements.txt --output=source/requirements.txt
 
+[testenv:doc]
+allowlist_externals = poetry
+description = Create the documentation with sphinx
+skip_install = True
+commands = poetry run sphinx-build -b html source build
 
 """
