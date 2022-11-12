@@ -1,6 +1,6 @@
-"""This is the write module
+"""This is the main module
 
-It just write text to the console
+It just starts the demo
 """
 
 import sys
