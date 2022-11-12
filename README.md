@@ -15,6 +15,7 @@ Demo project to try the package deployment. It uses poetry, tox and Github actio
 - [Package Installation](#package-installation)
   - [Upgrade](#upgrade)
 - [CI/CD with Github Actions](#cicd-with-github-actions)
+- [Documentation](#documentation)
 
 # Reference
 
@@ -94,3 +95,23 @@ If the package is already installed you may use the option -U to do an upgrade.
 I use tox with Github actions. Tox ist configured in the pyproject.toml file as legacy_tox_ini. See https://tox.wiki/en/latest/example/basic.html.
 
 For using Github actions you define your configuration in ./.github/workflows/*.yaml. Example for pylint is given there. In the Github actions I use the prepared tox environments. So I may execute the same tests locally.
+
+# Documentation
+
+For documentation I use sphinx and autodoc. The generated docs are published to readthedocs.com.
+
+Installing and setup sphinx
+
+    poetry add --group dev sphinx
+    poetry run sphinx-quickstart
+        > Separate source and build directories (y/n) [n]: y
+        > Project name: demops
+        > Author name(s): Patrik Spiess
+        > Project release []:
+        > Project language [en]:
+
+Building the documentation is then possible with:
+
+    poetry run sphinx-build -b html source build
+
+I do not use the option to build the documentation with `make html` as I prefer to do everything with poetry.
