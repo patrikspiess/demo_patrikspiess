@@ -10,6 +10,8 @@ Welcome to demops's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   demops.rst
+
 
 
 Indices and tables
@@ -19,6 +21,8 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+
+Link to another file: :ref:`demops_title1`.
 
 Own Modules
 ***********
