@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Change the sphinx theme to the beautiful sphinx_rtd_theme
+- Cleanup unused files from past experiments
 
 
 ## [0.1.4] - 2022.10.02
