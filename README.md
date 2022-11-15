@@ -105,6 +105,7 @@ The directory used for the documentation is docs in the project root. So create 
 Installing and setup sphinx
 
     poetry add --group dev sphinx
+    poetry add --group dev sphinx-rtd-theme
     mkdir docs
     cd docs
     poetry run sphinx-quickstart
