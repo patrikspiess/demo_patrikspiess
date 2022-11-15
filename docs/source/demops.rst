@@ -4,4 +4,4 @@
 title1
 ------
 
-This is a demo documantation file
+This is a demo documentation file

@@ -100,9 +100,13 @@ For using Github actions you define your configuration in ./.github/workflows/*.
 
 For documentation I use sphinx and autodoc. The generated docs are published to readthedocs.com.
 
+The directory used for the documentation is docs in the project root. So create this directory and initialize sphinx from there.
+
 Installing and setup sphinx
 
     poetry add --group dev sphinx
+    mkdir docs
+    cd docs
     poetry run sphinx-quickstart
         > Separate source and build directories (y/n) [n]: y
         > Project name: demops
@@ -110,13 +114,13 @@ Installing and setup sphinx
         > Project release []:
         > Project language [en]:
 
-Building the documentation is then possible with:
+Building the documentation from the projects root folder (one level above docs) is then possible with:
 
-    poetry run sphinx-build -b html source build
+    poetry run sphinx-build -b html docs/source docs/build
 
 I do not use the option to build the documentation with `poetry run make html` as I prefer to do everything with poetry. therefore I added a tox env for creating the documentation:
 
-    poetry run tox -e doc
+    poetry run tox -e docs
 
 ## readthedocs Configuration
 

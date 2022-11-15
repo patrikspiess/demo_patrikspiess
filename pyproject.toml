@@ -69,12 +69,12 @@ commands = mypy {posargs} demo_patrikspiess --junit-xml mypy.xml
 allowlist_externals = poetry
 description = Create a requirements.txt from the Poetry dependencies (used for readthedocs)
 skip_install = True
-commands = poetry export --without-hashes --format=requirements.txt --output=source/requirements.txt
+commands = poetry export --without-hashes --format=requirements.txt --output=docs/requirements.txt
 
-[testenv:doc]
+[testenv:docs]
 allowlist_externals = poetry
 description = Create the documentation with sphinx
 skip_install = True
-commands = poetry run sphinx-build -b html source build
+commands = poetry run sphinx-build -b html docs/source docs/build
 
 """

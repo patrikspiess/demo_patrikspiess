@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- introduce automatic documentation with sphinx and autodoc (for readthedocs.io)
 - introduce type checking with mypy
 
 ## [0.1.4] - 2022.10.02
