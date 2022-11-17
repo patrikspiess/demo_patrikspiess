@@ -8,8 +8,9 @@ Welcome to demops's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
 
+   docsguide.rst
    demops.rst
 
 
@@ -24,7 +25,7 @@ Indices and tables
 Demos
 =====
 
-Go to :ref:`demops_title1`
+Go to :ref:`demops_main_title`
 
 .. autofunction:: demo_patrikspiess.demo.Demo.add_one
 .. autofunction:: io.open

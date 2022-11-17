@@ -1,7 +1,11 @@
+###############
+The demops File
+###############
 
-.. _demops_title1:
+.. _demops_main_title:
 
-title1
-------
+Main Title
+==========
 
-This is a demo documentation file
+This is a demo documentation file. It's just used to try some things and does not really document 
+something.
