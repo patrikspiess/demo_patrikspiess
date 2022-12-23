@@ -9,11 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- introduce automatic documentation with sphinx and autodoc (for readthedocs.io)
-- introduce type checking with mypy
+- Introduce logging capabilities
+- Introduce a first version of the config module
+- Introduce black format checking
+- Introduce automatic documentation with sphinx and autodoc (for readthedocs.io)
+- Introduce type checking with mypy
 
 ### Changed
 
+- Change the tox dependency handling (to not specify deps again in tox config)
 - Change the sphinx theme to the beautiful sphinx_rtd_theme
 - Cleanup unused files from past experiments
 

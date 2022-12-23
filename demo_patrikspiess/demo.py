@@ -4,8 +4,12 @@ Here we define some examples classes and methods
 """
 
 from typing import List
+
 from rich import print  # pylint: disable=redefined-builtin
 from rich.panel import Panel
+
+from demo_patrikspiess.log_demo import Loggie
+
 from .exceptions import DemoException
 
 
@@ -19,6 +23,10 @@ class Demo:
                 print("something")
             if params[1] == "2":
                 raise DemoException("This is a demo exception (not really an error)")
+            if params[1] == "3":
+                print("--- do some logging ---")
+                Loggie()
+
         else:
             self.help()
 
@@ -40,6 +48,7 @@ class Demo:
             "fancy actions you may add a parameter. Here we show you what parameters are valid:"
             "\n\n"
             "1 : print something\n"
-            "2 : Raise an exception"
+            "2 : Raise an exception\n"
+            "3 : Write some logs"
         )
         print(Panel(help_text, border_style="blue", title="Help", title_align="right"))

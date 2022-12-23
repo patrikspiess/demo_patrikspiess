@@ -4,7 +4,8 @@ It just starts the demo
 """
 
 import sys
-from . import Demo
+
+from demo_patrikspiess import Demo
 
 
 def main() -> None:
