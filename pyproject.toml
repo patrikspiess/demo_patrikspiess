@@ -18,6 +18,10 @@ classifiers = [
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Framework :: tox",
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Extension",
+    "Framework :: Sphinx :: Theme",
     "Topic :: Education",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Version Control :: Git"
