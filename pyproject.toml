@@ -93,6 +93,6 @@ commands = poetry export --without-hashes --format=requirements.txt --output=doc
 allowlist_externals = poetry
 description = Create the documentation with sphinx
 skip_install = True
-commands = poetry run sphinx-build -b html docs/source docs/build
+commands = poetry run sphinx-build -aEW -b html docs/source docs/build
 
 """
