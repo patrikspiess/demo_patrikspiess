@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changed
+
+
+## [0.2.2] - 2023.02.06
+
+### Changed
+
+- Update some documentation on how to publish
+- Update README with link to the readthedocs.io documentation
+
+
+## [0.2.1] - 2023.02.06
+
+### Added
+
 - Introduce logging capabilities
 - Introduce a first version of the config module
 - Introduce black format checking

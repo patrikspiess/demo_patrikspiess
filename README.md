@@ -78,6 +78,14 @@ First the repository has to be registered:
 
     poetry config repositories.testpypi https://test.pypi.org/legacy/
 
+Second I add my testpypi token to the Git configuration so I don't have to specify it on every
+publish:
+
+    poetry config pypi-token.testpypi <pypi_api_token>
+
+If the token is not added to the Git config it has to be specified every time with `-u` (username,
+which is always *\_\_token\_\_*) and `-p` (password which in this case is the token)
+
 Then I can upload the package with the following command:
 
     poetry publish --repository testpypi
@@ -133,9 +141,17 @@ I do not use the option to build the documentation with `poetry run make html` a
 
 ## readthedocs Configuration
 
-For readthedocs being able to create the docs from the github repository I added a .readthedocs.yaml in the root of the project. The important statements are the python version and the requirements file.
+This projects documentation has been published on readthedocs.io. The path to the docs is:
 
-Although the package dependencies are managed by poetry, readthedocs needs a classic requirements.txt file. Therefore a tox env was created to generate the requirements.txt into the source directory.
+https://demo-patrikspiess.readthedocs.io/en/latest/index.html
+
+For readthedocs being able to create the docs from the github repository I added a .readthedocs.yaml
+in the root of the project. The important statements are the python version and the requirements
+file.
+
+Although the package dependencies are managed by poetry, readthedocs needs a classic
+requirements.txt file. Therefore a tox env was created to generate the requirements.txt into the
+source directory.
 
     poetry export --without-hashes --format=requirements.txt --output=source/requirements.txt
 
