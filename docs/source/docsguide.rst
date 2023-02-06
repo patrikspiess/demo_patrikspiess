@@ -1,4 +1,3 @@
-#######################
 The Documentation Guide
 #######################
 
@@ -6,27 +5,39 @@ The Documentation Guide
     :depth: 2
 
 Document Title
-==============
+**************
 
 For the document title use the # sign for over- and underline.
 
 Sections
-========
+********
 
-Use the following Section identifiers in the order given as underline:
-    
-    = - ` : ' " ~ ^ _ * + # < >
+Use the following Section identifiers in the order given as underline as per
+`Python Developer's Guide <https://devguide.python.org/documentation/markup/#sections>`_:
+
+    - # with overline, for parts
+    - \* with overline, for chapters
+    - = for sections
+    - \- for subsections
+    - ^ for subsubsections
+    - " for paragraphs
 
 Examples
---------
+********
 
-Sub-Example
-```````````
+This is a new chapter for examples.
 
-Sub-Sub-Example
-:::::::::::::::
+Section-Example
+===============
+
+This is a new section.
+
+Subsection-Example
+------------------
+
+This is a subsection example.
 
 End
-===
+***
 
-This is the end of the document
+This is a new chapter and the end of the document.
