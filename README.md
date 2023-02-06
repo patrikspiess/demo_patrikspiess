@@ -56,7 +56,7 @@ Later you may list all the tags:
 
 ### Pushing Git Tags
 
-After a git tag hes been created it hat to be pushed to the remote repository:
+After a git tag has been created it has to be pushed to the remote repository:
 
     git push origin <tag_name>
 
