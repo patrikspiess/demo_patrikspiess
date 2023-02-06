@@ -54,6 +54,14 @@ Later you may list all the tags:
 
     git tag --list
 
+### Pushing Git Tags
+
+After a git tag hes been created it hat to be pushed to the remote repository:
+
+    git push origin <tag_name>
+
+It's not best practice to use `git push --tags`.
+
 # Building the Package
 
 According to https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives I build the distribution packages but I use poetry.
