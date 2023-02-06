@@ -129,8 +129,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# poerty cache
-poetry.lock
-
 # IDEs
 .vscode/
