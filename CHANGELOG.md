@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+
+## [0.2.3] - 2023.02.07
+
+### Changed
+
+- Solve a tox dependency issue (by upgrading tox)
+- Add dev dependencies to readthedocs requirements file
 - Remove poetry cache from .gitignore
 
 
