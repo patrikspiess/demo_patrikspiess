@@ -36,10 +36,9 @@ rich = "~12.5.1"
 PyYAML = "~6.0.0"
 
 [tool.poetry.group.dev.dependencies]
-tox = "~3.27.0"
+tox = "~4.4.0"
 pylint = "~2.15.3"
 mypy = "^0.982"
-docutils = "~0.17.1"
 sphinx = "~5.3.0"
 sphinx-rtd-theme = "~1.1.1"
 types-PyYAML = "^6.0.12.2"
@@ -66,41 +65,41 @@ line-length = 100
 [tool.tox]
 legacy_tox_ini = """[tox]
 
-isolated_build = True
+isolated_build = true
 envlist = pylint, mypy, black, requirements, docs
 
 [testenv:pylint]
 description = Code analysis with pylint
 skip_install = true
-whitelist_externals = poetry
+allowlist_externals = poetry
 commands_pre = poetry install
 commands = pylint {posargs} demo_patrikspiess
 
 [testenv:mypy]
 description = Static type checking with mypy
 skip_install = true
-whitelist_externals = poetry
+allowlist_externals = poetry
 commands_pre = poetry install
 commands = mypy {posargs} demo_patrikspiess --junit-xml mypy.xml
 
 [testenv:black]
 description = Check formatting with black
 skip_install = true
-whitelist_externals = poetry
+allowlist_externals = poetry
 commands_pre = poetry install
 commands = black --check --diff {posargs} .
 
 [testenv:requirements]
 description = Create a requirements.txt from the Poetry dependencies (used for readthedocs)
-skip_install = True
-whitelist_externals = poetry
+skip_install = true
+allowlist_externals = poetry
 commands_pre = poetry install
 commands = poetry export --without-hashes --format=requirements.txt --output=docs/requirements.txt
 
 [testenv:docs]
 description = Create the documentation with sphinx
-skip_install = True
-whitelist_externals = poetry
+skip_install = true
+allowlist_externals = poetry
 commands_pre = poetry install
 commands = poetry run sphinx-build -aEW -b html docs/source docs/build
 
