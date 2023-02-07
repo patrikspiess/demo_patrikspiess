@@ -1,5 +1,5 @@
 [build-system]
-requires = ["poetry-core>=1.2.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
@@ -32,11 +32,11 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.8.0, <3.11"
-rich = "~12.6.0"
-PyYAML = "^6.0"
+rich = "~12.5.1"
+PyYAML = "~6.0.0"
 
 [tool.poetry.group.dev.dependencies]
-tox = "~3.28.0"
+tox = "~3.27.0"
 pylint = "~2.15.3"
 mypy = "^0.982"
 docutils = "~0.17.1"
@@ -59,18 +59,21 @@ strict = true
 [tool.black]
 line-length = 100
 
+# here we define the tox settings
+# we do it inline ecause we don't want to have another tox.ini in the project root
+# package management is done as described in option 3 on the following FAQ
+#  - https://python-poetry.org/docs/master/faq/
 [tool.tox]
 legacy_tox_ini = """[tox]
 
 isolated_build = True
-envlist = pylint, mypy, black, requirements, doc
+envlist = pylint, mypy, black, requirements, docs
 
 [testenv:pylint]
 description = Code analysis with pylint
 skip_install = true
 whitelist_externals = poetry
 commands_pre = poetry install
-#deps = pylint >= 2.15.3
 commands = pylint {posargs} demo_patrikspiess
 
 [testenv:mypy]
@@ -78,7 +81,6 @@ description = Static type checking with mypy
 skip_install = true
 whitelist_externals = poetry
 commands_pre = poetry install
-# deps = mypy >= 0.982
 commands = mypy {posargs} demo_patrikspiess --junit-xml mypy.xml
 
 [testenv:black]
@@ -89,15 +91,17 @@ commands_pre = poetry install
 commands = black --check --diff {posargs} .
 
 [testenv:requirements]
-allowlist_externals = poetry
 description = Create a requirements.txt from the Poetry dependencies (used for readthedocs)
 skip_install = True
+whitelist_externals = poetry
+commands_pre = poetry install
 commands = poetry export --without-hashes --format=requirements.txt --output=docs/requirements.txt
 
 [testenv:docs]
-allowlist_externals = poetry
 description = Create the documentation with sphinx
 skip_install = True
+whitelist_externals = poetry
+commands_pre = poetry install
 commands = poetry run sphinx-build -aEW -b html docs/source docs/build
 
 """
