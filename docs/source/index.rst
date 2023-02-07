@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to demops's documentation!
-==================================
+##################################
 
 .. toctree::
    :maxdepth: 2
@@ -15,7 +15,7 @@ Welcome to demops's documentation!
 
 
 Indices and tables
-==================
+##################
 
 * :ref:`genindex`
 * :ref:`modindex`
@@ -23,7 +23,7 @@ Indices and tables
 
 
 Demos
-=====
+#####
 
 Go to :ref:`demops_main_title`
 

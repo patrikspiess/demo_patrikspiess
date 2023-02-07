@@ -1,3 +1,5 @@
+.. demops documentation guide
+
 The Documentation Guide
 #######################
 
