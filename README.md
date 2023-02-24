@@ -1,5 +1,4 @@
-![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/patrikspiess/demo_patrikspiess?label=version&style=plastic)
-![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/patrikspiess/demo_patrikspiess/tests.yaml?style=plastic)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/patrikspiess/demo_patrikspiess?style=plastic)![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/patrikspiess/demo_patrikspiess/tests.yaml?style=plastic)
 ![GitHub](https://img.shields.io/github/license/patrikspiess/demo_patrikspiess?style=plastic)
 ![GitHub open issues](https://img.shields.io/github/issues-raw/patrikspiess/demo_patrikspiess?style=plastic)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/patrikspiess/demo_patrikspiess?style=plastic)
