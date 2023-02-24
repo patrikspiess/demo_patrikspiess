@@ -71,21 +71,21 @@ envlist = pylint, mypy, black, requirements, docs
 [testenv:pylint]
 description = Code analysis with pylint
 skip_install = true
-allowlist_externals = poetry
+allowlist_externals = poetry, pylint
 commands_pre = poetry install
 commands = pylint {posargs} demo_patrikspiess
 
 [testenv:mypy]
 description = Static type checking with mypy
 skip_install = true
-allowlist_externals = poetry
+allowlist_externals = poetry, mypy
 commands_pre = poetry install
 commands = mypy {posargs} demo_patrikspiess --junit-xml mypy.xml
 
 [testenv:black]
 description = Check formatting with black
 skip_install = true
-allowlist_externals = poetry
+allowlist_externals = poetry, black
 commands_pre = poetry install
 commands = black --check --diff {posargs} .
 
@@ -99,8 +99,8 @@ commands = poetry export --without-hashes --with dev --format=requirements.txt -
 [testenv:docs]
 description = Create the documentation with sphinx
 skip_install = true
-allowlist_externals = poetry
+allowlist_externals = poetry, sphinx-build
 commands_pre = poetry install
-commands = poetry run sphinx-build -aEW -b html docs/source docs/build
+commands = sphinx-build -aEW -b html docs/source docs/build
 
 """
