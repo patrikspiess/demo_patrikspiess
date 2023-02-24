@@ -1,6 +1,22 @@
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/patrikspiess/demo_patrikspiess?label=version&style=plastic)
+![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/patrikspiess/demo_patrikspiess/testing.yaml?style=plastic)
+![GitHub](https://img.shields.io/github/license/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub open issues](https://img.shields.io/github/issues-raw/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub watchers](https://img.shields.io/github/watchers/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub forks](https://img.shields.io/github/forks/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/patrikspiess/demo_patrikspiess?style=plastic)
+![GitHub all releases](https://img.shields.io/github/downloads/patrikspiess/demo_patrikspiess/total?style=plastic)
+
+
 # demo_patrikspiess
 
-Demo project to try the package deployment. It uses poetry, tox and Github actions. It is not meant to do anything useful.
+Demo project to try the package deployment. It uses poetry, tox and Github actions. It is not meant
+to do anything useful.
 
 # Contents
 
@@ -143,7 +159,7 @@ I do not use the option to build the documentation with `poetry run make html` a
 
 This projects documentation has been published on readthedocs.io. The path to the docs is:
 
-https://demo-patrikspiess.readthedocs.io/en/latest/index.html
+[demo-patrikspiess.readthedocs.io](https://demo-patrikspiess.readthedocs.io/)
 
 For readthedocs being able to create the docs from the github repository I added a .readthedocs.yaml
 in the root of the project. The important statements are the python version and the requirements
