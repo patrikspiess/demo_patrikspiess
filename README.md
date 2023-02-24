@@ -12,6 +12,9 @@
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/patrikspiess/demo_patrikspiess?style=plastic)
 ![GitHub all releases](https://img.shields.io/github/downloads/patrikspiess/demo_patrikspiess/total?style=plastic)
 
+These badges are all generated with [shields.io](https://shields.io/)
+
+***
 
 # demo_patrikspiess
 
