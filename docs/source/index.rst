@@ -1,18 +1,17 @@
-.. demops documentation master file, created by
-   sphinx-quickstart on Tue Nov 15 16:40:57 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. demo_patrikspiess documentation master file, created by sphinx-quickstart
 
-Welcome to demops's documentation!
-##################################
+Welcome to demo_patrikspiess
+############################
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents
 
-   docsguide.rst
-   demops.rst
-
+   setup_project.rst
+   build.rst
+   installation.rst
+   documentation_guide.rst
+   
 
 Indices and tables
 ##################
@@ -22,10 +21,18 @@ Indices and tables
 * :ref:`search`
 
 
-Demos
-#####
+Introduction
+############
 
-Go to :ref:`demops_main_title`
+This is a demo project to try the Python package deployment. It uses poetry, tox and Github actions.
+It is not meant to do anything useful. It is just to demonstrate and learn some software engineering
+concepts. You may use the information provided here for whatever you want. If you want to
+practice contribution in a GitHub project feel free to fork this project and make a pull_request.
+I suggest you first add an item in the fanpage as your first pull_request.
+
+
+Autodoc-Demos
+#############
 
 .. autofunction:: demo_patrikspiess.demo.Demo.add_one
 .. autofunction:: io.open
