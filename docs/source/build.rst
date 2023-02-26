@@ -72,7 +72,7 @@ After a Git tag has been created it has to be pushed to the remote repository:
 It's not best practice to use ``git push --tags``.
 
 Building the Package
-====================
+********************
 
 According to `<https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives>`_
 I build the distribution packages but I use poetry.
@@ -84,8 +84,11 @@ I build the distribution packages but I use poetry.
 This builds the package as described in the tutorial. The package is stored in the folder *./dist*.
 This folder should be ignored in *.gitignore*.
 
-Upload (publish) the Package
-============================
+Release the Package
+*******************
+
+Publish to PyPI
+===============
 
 Instead of using twine I use poetry to upload (publish) the package to PyPI.
 
@@ -118,3 +121,9 @@ password.
 
 After successful publishing to PyPI the project can be found here
 `<https://test.pypi.org/project/demo-patrikspiess/>`_
+
+
+Make a Release on GitHub
+========================
+
+At the end do not forget to make a new release on GitHub.

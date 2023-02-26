@@ -11,6 +11,7 @@ Welcome to demo_patrikspiess
    build.rst
    installation.rst
    documentation_guide.rst
+   autodoc.rst
    
 
 Indices and tables
@@ -31,8 +32,3 @@ practice contribution in a GitHub project feel free to fork this project and mak
 I suggest you first add an item in the fanpage as your first pull_request.
 
 
-Autodoc-Demos
-#############
-
-.. autofunction:: demo_patrikspiess.demo.Demo.add_one
-.. autofunction:: io.open

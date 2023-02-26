@@ -33,9 +33,11 @@ For the official documentation of this project please got to
 
 # Reference
 
-This project is a demo project from the **Packaging Python Projects** Tutorial which can be found at https://packaging.python.org/en/latest/tutorials/packaging-projects/#
+This project is a demo project from the **Packaging Python Projects** Tutorial which can be found at
+https://packaging.python.org/en/latest/tutorials/packaging-projects/#
 
-Other than in the tutorial mentioned above I use poetry as a package manager. Therefore some of the configuration or commands differ from what you see in the tutorial.
+Other than in the tutorial mentioned above I use poetry as a package manager. Therefore some of the
+configuration or commands differ from what you see in the tutorial.
 
 Additionally I use some test and build features to try out some workflow/actions stuff.
 
