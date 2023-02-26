@@ -4,7 +4,7 @@ Welcome to demo_patrikspiess
 ############################
 
 .. toctree::
-   :maxdepth: 2
+   :titlesonly:
    :caption: Contents
 
    setup_project.rst
@@ -13,14 +13,6 @@ Welcome to demo_patrikspiess
    documentation_guide.rst
    autodoc.rst
    
-
-Indices and tables
-##################
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
 
 Introduction
 ############
