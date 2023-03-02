@@ -53,7 +53,7 @@ git add demo_patrikspiess/__init__.py
 git add CHANGELOG.md
 
 echo 'Committing version bump...'
-git commit -m ":bookmark: Commit version v$new_version"
+git commit -m "Commit new version v$new_version"
 echo 'Pushing version bump...'
 git push
 
