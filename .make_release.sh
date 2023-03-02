@@ -21,11 +21,11 @@ case $version_bump in
     exit 1
 esac
 
-old_version=`poetry version | sed 's/fotoobo \(.*\)/\1/'`
+old_version=`poetry version | sed 's/demo-patrikspiess \(.*\)/\1/'`
 
 poetry version $version_bump
 
-new_version=`poetry version | sed 's/fotoobo \(.*\)/\1/'`
+new_version=`poetry version | sed 's/demo-patrikspiess \(.*\)/\1/'`
 
 if [[ -n `grep "## \[$new_version\]" ./CHANGELOG.md` ]] ; then
   echo "New version would be $new_version. Is this ok? [y/N]"
