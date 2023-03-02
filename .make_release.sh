@@ -45,11 +45,11 @@ case $ok in
     exit 1
 esac
 
-echo 'Writing new version to "demo-patrikspiess/__init__.py"...'
-sed -i "s/$old_version/$new_version/g" demo-patrikspiess/__init__.py
+echo 'Writing new version to "demo_patrikspiess/__init__.py"...'
+sed -i "s/$old_version/$new_version/g" demo_patrikspiess/__init__.py
 
 git add pyproject.toml
-git add demo-patrikspiess/__init__.py
+git add demo_patrikspiess/__init__.py
 git add CHANGELOG.md
 
 echo 'Committing version bump...'
