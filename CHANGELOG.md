@@ -12,11 +12,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 
-## [0.2.5] - 2023.03.02
+## [0.2.6] - 2023.03.02
 
 ### Added
 
 - Script .make_release.py to automatically build, publish and release the project
+
+### Comment
+
+There are some intermediate release not mentioned here. These were used to test the automatic
+release of the project.
 
 ## [0.2.3] - 2023.02.07
 
