@@ -1,9 +1,11 @@
 name: Release a new version
 
-on: push
-# Sequence of patterns matched against refs/tags
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
     tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
+
 jobs:
   build-n-publish-to-pypi:
     name: Build and publish Fotoobo distributions to PyPI (test)
@@ -22,7 +24,7 @@ jobs:
         run: poetry config pypi-token.testpypi "${{ secrets.PYPI_API_TOKEN }}"
       - name: Build and then publish fotoobo to PyPI
         run: poetry publish --build
-  
+
   build:
     name: Create Release
     runs-on: ubuntu-latest
