@@ -21,7 +21,7 @@ jobs:
       - name: set testpypi as the repository
         run: poetry config repositories.testpypi https://test.pypi.org/legacy/
       - name: Configure API token
-        run: poetry config pypi-token.testpypi "${{ secrets.PYPI_API_TOKEN }}"
+        run: poetry config pypi-token.testpypi "${{ secrets.TESTPYPI_API_TOKEN }}"
       - name: Build and then publish fotoobo to PyPI
         run: poetry publish --build --repository testpypi
 
