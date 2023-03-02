@@ -31,7 +31,7 @@ if [[ -n `grep "## \[$new_version\]" ./CHANGELOG.md` ]] ; then
   echo "New version would be $new_version. Is this ok? [y/N]"
   read ok
 else
-  echo "ERROR: New version not found in the CHANGELOG.md, please update the CHANGELOG.md first."
+  echo "ERROR: New version not found in the CHANGELOG.md, please update CHANGELOG.md first."
   ok='N'
 fi
 
