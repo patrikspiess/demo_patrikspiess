@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath(os.path.join("..", "..")))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "demops"  # pylint: disable=invalid-name
+project = "demo_patrikspiess"  # pylint: disable=invalid-name
 copyright = "2023, Patrik Spiess"  # pylint: disable=invalid-name, redefined-builtin
 author = "Patrik Spiess"  # pylint: disable=invalid-name
 

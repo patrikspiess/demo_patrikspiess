@@ -1,4 +1,4 @@
-.. demops documentation guide
+.. demo_patrikspiess documentation guide
 
 The Documentation Guide
 #######################
