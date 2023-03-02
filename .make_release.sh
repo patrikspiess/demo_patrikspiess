@@ -1,6 +1,7 @@
 #!/bin/bash
 # Bump a new release. Handling is the same as with poetry version,
 # but also takes care of __init__.py:version, git tag, ...
+# Then creating and pushing a new tag so that the release pipeline gets started on GitHub.
 
 if [[ -n "$(git status --porcelain | grep -v ' M CHANGELOG.md')" ]] ; then
   echo "error: git repository is not clean (except of CHANGELOG.md), please commit and/or stash all changes (except of CHANGELOG.md) before running this script."
@@ -44,11 +45,11 @@ case $ok in
     exit 1
 esac
 
-echo 'Writing new version to "fotoobo/__init__.py"...'
-sed -i "s/$old_version/$new_version/g" fotoobo/__init__.py
+echo 'Writing new version to "demo-patrikspiess/__init__.py"...'
+sed -i "s/$old_version/$new_version/g" demo-patrikspiess/__init__.py
 
 git add pyproject.toml
-git add fotoobo/__init__.py
+git add demo-patrikspiess/__init__.py
 git add CHANGELOG.md
 
 echo 'Committing version bump...'
@@ -56,11 +57,6 @@ git commit -m ":bookmark: Commit version v$new_version"
 echo 'Pushing version bump...'
 git push
 
-# echo "1st step done. Now create a pull request to the upstream repository and ask a maintainer to create the tag for you."
-
-
-
-new_version=`poetry version | sed 's/fotoobo \(.*\)/\1/'`
 
 echo 'Create and push tag...'
 git tag -a "v$new_version" -m "Version v$new_version"
