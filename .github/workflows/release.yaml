@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-n-publish-to-pypi:
-    name: Build and publish Fotoobo distributions to PyPI (test)
+    name: Build and publish project to PyPI (test)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -23,10 +23,10 @@ jobs:
       - name: Configure API token
         run: poetry config pypi-token.testpypi "${{ secrets.PYPI_API_TOKEN }}"
       - name: Build and then publish fotoobo to PyPI
-        run: poetry publish --build
+        run: poetry publish --build --repository testpypi
 
   build:
-    name: Create Release
+    name: Create GitHub Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -39,6 +39,6 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          body_path: CHANGELOG:md
+          body_path: CHANGELOG.md
           draft: false
           prerelease: false
