@@ -14,8 +14,8 @@ Before you build
 CHANGELOG.md
 ============
 
-For every change update the CHANGELOG.mdCHANGELOG.md inf the project root directory to reflect the
-news. Users and contributors need to know about changes in the project. When bumping the version
+For every change update the CHANGELOG.md in the project root directory to reflect the news.
+Users and contributors need to know about changes in the project. When bumping the version
 the CHANGELOG.md gets a new section with the new version and the `Unreleased` section is cleared
 for the next upcoming changes.
 
