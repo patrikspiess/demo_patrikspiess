@@ -25,7 +25,7 @@ Additionally in Ubuntu 22.04 I use the following:
 
 - Python 3.11
 
-To install Python 3.11 and use the command ``python`` to start my Python 3.11 interpreter I usethe
+To install Python 3.11 and use the command ``python`` to start my Python 3.11 interpreter I use the
 following commands:
 
 ::
@@ -64,7 +64,7 @@ After that you may check your poetry version with:
 Initializing the Project
 ************************
 
-THe start a new project change to the desired directory where you want to create your project and
+To start a new project change to the desired directory where you want to create your project and
 initialize it with ``poetry new``:
 
 ::
