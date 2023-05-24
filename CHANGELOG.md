@@ -12,6 +12,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 
+## [0.3.0] - 2023.05.24
+
+### Added
+
+- Add support for Python 3.11
+
+### Changed
+
+- Update requests to 2.31.0 because of Dependabot security warning
+
+
 ## [0.2.12] - 2023.03.02
 
 ### Added
