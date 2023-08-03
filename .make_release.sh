@@ -2,7 +2,7 @@
 # Bump a new release. Handling is the same as with poetry version,
 # but also takes care of __init__.py:version, git tag, ...
 
-if [[ -n "$(git status --porcelain | grep -v ' M WHATSNEW.md')" ]] ; then
+if [[ -n "$(git status --porcelain | grep -v 'WHATSNEW.md')" ]] ; then
   echo "error: git repository is not clean (except of WHATSNEW.md), please commit and/or stash all changes (except of WHATSNEW.md) before running this script."
   exit 1
 fi
