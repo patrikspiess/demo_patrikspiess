@@ -10,6 +10,12 @@ For unreleased changes see [WHATSNEW.md](WHATSNEW.md)
 
 # [Released]
 
+## [0.4.2] - 2023-08-03
+
+### Changed
+
+- Use WHATSNEW.md as release file instead of full CHANGELOG.md
+
 
 ## [0.3.0] - 2023.05.24
 
