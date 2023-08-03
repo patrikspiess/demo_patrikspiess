@@ -21,11 +21,11 @@ case $version_bump in
     exit 1
 esac
 
-old_version=`poetry version | sed 's/fotoobo \(.*\)/\1/'`
+old_version=`poetry version | sed 's/demo-patrikspiess \(.*\)/\1/'`
 
 poetry version $version_bump
 
-new_version=`poetry version | sed 's/fotoobo \(.*\)/\1/'`
+new_version=`poetry version | sed 's/demo-patrikspiess \(.*\)/\1/'`
 
 echo "New version would be $new_version. Is this ok? [y/N]"
 read ok
@@ -39,18 +39,17 @@ case $ok in
     exit 1
 esac
 
-echo 'Writing new version to "fotoobo/__init__.py"...'
-sed -i "s/$old_version/$new_version/g" fotoobo/__init__.py
+echo 'Writing new version to "demo-patrikspiess/__init__.py"...'
+sed -i "s/$old_version/$new_version/g" demo-patrikspiess/__init__.py
 
 echo "Updating CHANGELOG.md"
 sed -i -e '/./,$!d' -e :a -e '/^\n*$/{$d;N;ba' -e '}' WHATSNEW.md
 VERSION="## [$new_version] - $(date +%Y-%m-%d)"
-WHATSNEW="$(<WHATSNEW.md)"
 sed -i "1s/^/\n$VERSION\n\n/" WHATSNEW.md
 sed -i '/# \[Released\]/r WHATSNEW.md' CHANGELOG.md
 
 git add pyproject.toml
-git add fotoobo/__init__.py
+git add demo-patrikspiess/__init__.py
 git add CHANGELOG.md
 git add WHATSNEW.md
 
