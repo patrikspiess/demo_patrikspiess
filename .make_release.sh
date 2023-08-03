@@ -1,10 +1,9 @@
 #!/bin/bash
 # Bump a new release. Handling is the same as with poetry version,
 # but also takes care of __init__.py:version, git tag, ...
-# Then creating and pushing a new tag so that the release pipeline gets started on GitHub.
 
-if [[ -n "$(git status --porcelain | grep -v ' M CHANGELOG.md')" ]] ; then
-  echo "error: git repository is not clean (except of CHANGELOG.md), please commit and/or stash all changes (except of CHANGELOG.md) before running this script."
+if [[ -n "$(git status --porcelain | grep -v ' M WHATSNEW.md')" ]] ; then
+  echo "error: git repository is not clean (except of WHATSNEW.md), please commit and/or stash all changes (except of WHATSNEW.md) before running this script."
   exit 1
 fi
 
@@ -22,19 +21,14 @@ case $version_bump in
     exit 1
 esac
 
-old_version=`poetry version | sed 's/demo-patrikspiess \(.*\)/\1/'`
+old_version=`poetry version | sed 's/fotoobo \(.*\)/\1/'`
 
 poetry version $version_bump
 
-new_version=`poetry version | sed 's/demo-patrikspiess \(.*\)/\1/'`
+new_version=`poetry version | sed 's/fotoobo \(.*\)/\1/'`
 
-if [[ -n `grep "## \[$new_version\]" ./CHANGELOG.md` ]] ; then
-  echo "New version would be $new_version. Is this ok? [y/N]"
-  read ok
-else
-  echo "ERROR: New version not found in the CHANGELOG.md, please update CHANGELOG.md first."
-  ok='N'
-fi
+echo "New version would be $new_version. Is this ok? [y/N]"
+read ok
 
 case $ok in
   y)
@@ -45,22 +39,42 @@ case $ok in
     exit 1
 esac
 
-echo 'Writing new version to "demo_patrikspiess/__init__.py"...'
-sed -i "s/$old_version/$new_version/g" demo_patrikspiess/__init__.py
+echo 'Writing new version to "fotoobo/__init__.py"...'
+sed -i "s/$old_version/$new_version/g" fotoobo/__init__.py
+
+echo "Updating CHANGELOG.md"
+sed -i -e '/./,$!d' -e :a -e '/^\n*$/{$d;N;ba' -e '}' WHATSNEW.md
+VERSION="## [$new_version] - $(date +%Y-%m-%d)"
+WHATSNEW="$(<WHATSNEW.md)"
+sed -i "1s/^/\n$VERSION\n\n/" WHATSNEW.md
+sed -i '/# \[Released\]/r WHATSNEW.md' CHANGELOG.md
 
 git add pyproject.toml
-git add demo_patrikspiess/__init__.py
+git add fotoobo/__init__.py
 git add CHANGELOG.md
+git add WHATSNEW.md
 
 echo 'Committing version bump...'
-git commit -m "Commit new version v$new_version"
+git commit -m ":bookmark: Commit version v$new_version"
 echo 'Pushing version bump...'
 git push
 
 
+# Tag the release and push it
 echo 'Create and push tag...'
 git tag -a "v$new_version" -m "Version v$new_version"
 git push origin "v$new_version"
 
 echo "Done. Version $new_version is now released on GitHub (and soon on PyPi, etc.)."
-echo -e "Congratulations!"
+echo -e "Congratulations"
+
+
+# After the release we have to empty the WHATSNEW file and commit/push it again
+echo "Emptiying WHATSNEW.md"
+printf "### Added\n\n" > WHATSNEW.md
+printf "### Changed\n\n" >> WHATSNEW.md
+printf "### Removed\n\n" >> WHATSNEW.md
+git add WHATSNEW.md
+git commit -m ":memo: Reset WHATSNEW.md with template"
+git push
+echo "finished"
