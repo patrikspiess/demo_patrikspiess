@@ -1,4 +1,4 @@
-<p style="text-align: right"><img src=demo.png?raw=True width="200px"></p>
+<p style="text-align: right"><img src=https://raw.githubusercontent.com/patrikspiess/demo_patrikspiess/main/demo.png width="200px"></p>
 
 # demo_patrikspiess
 **Demo for a Python package development**
