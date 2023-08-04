@@ -1,6 +1,6 @@
 <p style="text-align: right"><img src=demo.png?raw=True width="200px"></p>
 
-# fotoobo | Fortinet Toolbox
+# demo_patrikspiess
 **Demo for a Python package development**
 
 ***
