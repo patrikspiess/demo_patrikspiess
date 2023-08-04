@@ -10,6 +10,12 @@ For unreleased changes see [WHATSNEW.md](WHATSNEW.md)
 
 # [Released]
 
+## [0.4.4] - 2023-08-04
+
+### Changed
+
+- Fix the logo link in README.md so it also shows on pypi
+
 ## [0.4.3] - 2023-08-04
 
 ### Added
