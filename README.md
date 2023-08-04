@@ -1,3 +1,10 @@
+<p style="text-align: right"><img src=demo.png?raw=True width="200px"></p>
+
+# fotoobo | Fortinet Toolbox
+**Demo for a Python package development**
+
+***
+
 ![Author](https://img.shields.io/badge/author-patrikspiess-blue?style=plastic)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/patrikspiess/demo_patrikspiess?style=plastic)
 ![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/patrikspiess/demo_patrikspiess/tests.yaml?style=plastic)
