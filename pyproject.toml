@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "demo_patrikspiess"
-version = "0.4.2"
+version = "0.4.3"
 description = "Demo project to try the package deployment"
 authors = ["Patrik Spiess <patrik.spiess@bluewin.ch>"]
 license = "MIT"

@@ -10,6 +10,12 @@ For unreleased changes see [WHATSNEW.md](WHATSNEW.md)
 
 # [Released]
 
+## [0.4.3] - 2023-08-04
+
+### Added
+
+- Add a logo to README.my to test presence on pypi
+
 ## [0.4.2] - 2023-08-03
 
 ### Changed
