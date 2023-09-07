@@ -12,7 +12,7 @@ Setup the Project
 The Demo Environment
 ********************
 
-First let's give a shor description on my demo environment. You may use any other environment but I
+First let's give a short description on my demo environment. You may use any other environment but I
 cannot guarantee that other environments behave the same. For this project I use the following:
 
 - Windows 11 running WLS2
