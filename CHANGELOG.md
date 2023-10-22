@@ -10,6 +10,12 @@ For unreleased changes see [WHATSNEW.md](WHATSNEW.md)
 
 # [Released]
 
+## [0.4.5] - 2023-10-22
+
+### Changed
+
+- Update packages and dependencies (due to urllib3 vulnerability)
+
 ## [0.4.4] - 2023-08-04
 
 ### Changed
