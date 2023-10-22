@@ -7,14 +7,11 @@ Please note I have a code of conduct, please follow it in all your interactions 
 
 ## Pull Request Process
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment 
-   variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent.
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+As a first pull request I suggest you add a quote in the [FANPAGE.md](FANPAGE.md)
+
+1. Update the WHATSNEW.md with details of changes to the project. Do not change the CHAGELOG.md as it is updated automatically by .make_release.sh.
+2. Make sure the tests are successful by running `poetry run tox`. 
+3. You may request to merge the pull request in once you have the sign-off of another developer.
 
 ## Code of Conduct
 
@@ -41,17 +38,15 @@ Examples of unacceptable behavior by participants include:
 * The use of sexualized language or imagery and unwelcome sexual attention or advances
 * Trolling, insulting/derogatory comments, and personal or political attacks
 * Public or private harassment
-* Publishing others' private information, such as a physical or electronic address, without explicit
-  permission
+* Publishing others' private information, such as a physical or electronic address, without explicit permission
 * Other conduct which could reasonably be considered inappropriate in a professional setting
 
 ### Our Responsibilities
 
 Project maintainers are responsible for clarifying the standards of acceptable behavior and are 
-expected to take appropriate and fair corrective action in response to any instances of unacceptable
-behavior.
+expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, 
+Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, s
 code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or 
 to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate,
 threatening, offensive, or harmful.
