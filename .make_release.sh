@@ -40,7 +40,7 @@ case $ok in
 esac
 
 echo 'Writing new version to "demo-patrikspiess/__init__.py"...'
-sed -i "s/$old_version/$new_version/g" demo-patrikspiess/__init__.py
+sed -i "s/$old_version/$new_version/g" demo_patrikspiess/__init__.py
 
 echo "Updating CHANGELOG.md"
 sed -i -e '/./,$!d' -e :a -e '/^\n*$/{$d;N;ba' -e '}' WHATSNEW.md
@@ -49,7 +49,7 @@ sed -i "1s/^/\n$VERSION\n\n/" WHATSNEW.md
 sed -i '/# \[Released\]/r WHATSNEW.md' CHANGELOG.md
 
 git add pyproject.toml
-git add demo-patrikspiess/__init__.py
+git add demo_patrikspiess/__init__.py
 git add CHANGELOG.md
 git add WHATSNEW.md
 
