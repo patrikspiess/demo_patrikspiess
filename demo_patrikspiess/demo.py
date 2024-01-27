@@ -9,7 +9,7 @@ from rich import print  # pylint: disable=redefined-builtin
 from rich.panel import Panel
 
 from demo_patrikspiess.log_demo import Loggie
-
+from demo_patrikspiess.decorator import decorate
 from .exceptions import DemoException
 
 
@@ -20,15 +20,19 @@ class Demo:
         """initialize the thing"""
         if len(params) > 1:
 
-            if params[1] == "1":
-                print("something")
+            match params[1]:
+                case "1":
+                    print("something")
 
-            if params[1] == "2":
-                raise DemoException("This is a demo exception (not really an error)")
+                case "2":
+                    raise DemoException("This is a demo exception (not really an error)")
 
-            if params[1] == "3":
-                print("--- do some logging ---")
-                Loggie()
+                case "3":
+                    print("--- do some logging ---")
+                    Loggie()
+
+                case "4":
+                    print(decorate("Demo"))
 
         else:
             self.help()
