@@ -1,3 +1,6 @@
+
+## [0.5.0] - 2024-01-27
+
 ### Added
 
 - A fanpage to make first pull requests

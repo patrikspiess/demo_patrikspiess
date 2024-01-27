@@ -10,6 +10,19 @@ For unreleased changes see [WHATSNEW.md](WHATSNEW.md)
 
 # [Released]
 
+## [0.5.0] - 2024-01-27
+
+### Added
+
+- A fanpage to make first pull requests
+- Decorator demo
+
+### Changed
+
+### Removed
+
+- Support for Python 3.8 and Python 3.9
+
 ## [0.4.5] - 2023-10-22
 
 ### Changed
