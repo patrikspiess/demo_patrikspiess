@@ -10,7 +10,7 @@ This is the great fanpage. Here you can add your inspiring quote, a motivating t
 
 ---
 
-> *This is the most interesting how to for starting a python project with poetry and tox and other cool tools.* - 
+> *This is the most interesting "how to" for starting a python project with poetry and tox and other cool tools.* - 
 [Patrik Spiess](https://github.com/patrikspiess)
 
 ---
