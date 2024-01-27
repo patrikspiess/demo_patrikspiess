@@ -16,12 +16,12 @@ First let's give a short description on my demo environment. You may use any oth
 cannot guarantee that other environments behave the same. For this project I use the following:
 
 - Windows 11 running WLS2
-- Ubuntu 22.04 in WLS2
+- Ubuntu 23.04 in WLS2
 
-So, all I do is done in Ubuntu 22.04 even if my machine is Windows 11. Therefore the project should
+So, all I do is done in Ubuntu even if my machine is Windows. Therefore the project should
 also run in native Linux machines.
 
-Additionally in Ubuntu 22.04 I use the following:
+Additionally in Ubuntu I use the following:
 
 - Python 3.11
 
