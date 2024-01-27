@@ -19,10 +19,13 @@ class Demo:
     def __init__(self, params: List[str]) -> None:
         """initialize the thing"""
         if len(params) > 1:
+
             if params[1] == "1":
                 print("something")
+
             if params[1] == "2":
                 raise DemoException("This is a demo exception (not really an error)")
+
             if params[1] == "3":
                 print("--- do some logging ---")
                 Loggie()
