@@ -34,8 +34,5 @@ jobs:
       - name: Check formatting with black
         run: poetry run tox -e black
 
-      - name: Test create requirements file for readthedocs.io
-        run: poetry run tox -e requirements
-
       - name: Test create docs
         run: poetry run tox -e docs
