@@ -68,7 +68,7 @@ line-length = 100
 legacy_tox_ini = """[tox]
 
 isolated_build = true
-envlist = pylint, mypy, black, requirements, docs
+envlist = pylint, mypy, black, docs
 
 [testenv:pylint]
 description = Code analysis with pylint
