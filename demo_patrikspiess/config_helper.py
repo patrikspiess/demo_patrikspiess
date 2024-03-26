@@ -42,7 +42,6 @@ logging.item.destination (str)
         If you omit PORT the default port 514 will be used
 """
 
-
 from dataclasses import dataclass
 
 import yaml

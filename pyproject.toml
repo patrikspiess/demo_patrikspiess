@@ -39,7 +39,7 @@ PyYAML = "~6.0.0"
 pylint = "~3.0.0"
 mypy = "~1.5"
 types-PyYAML = "^6.0.12.2"
-black = "~22.12.0"
+black = "~24.03.0"
 tox = "^4.11.3"
 
 [tool.poetry.group.docs.dependencies]

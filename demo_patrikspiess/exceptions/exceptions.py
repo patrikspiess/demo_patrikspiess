@@ -1,6 +1,5 @@
 """Define demo exceptions"""
 
-
 import sys
 from typing import Optional
 
