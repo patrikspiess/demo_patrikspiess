@@ -10,6 +10,14 @@ For unreleased changes see [WHATSNEW.md](WHATSNEW.md)
 
 # [Released]
 
+## [0.5.4] - 2024-06-20
+
+### Added
+
+### Changed
+
+### Removed
+
 ## [demo_patrikspiess 0.5.3] - 2024-06-20
 
 ### Added
