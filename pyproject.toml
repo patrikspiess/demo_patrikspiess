@@ -32,8 +32,9 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.8.0, <=3.13"
-rich = "~12.5.1"
+rich = "~13.6.0"
 PyYAML = "~6.0.0"
+urllib3 = ">=2.2.2"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "~3.0.0"
