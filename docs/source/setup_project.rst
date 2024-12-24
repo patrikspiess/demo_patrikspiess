@@ -16,22 +16,20 @@ First let's give a short description on my demo environment. You may use any oth
 cannot guarantee that other environments behave the same. For this project I use the following:
 
 - Windows 11 running WLS2
-- Ubuntu 23.04 in WLS2
+- Ubuntu 24.04 in WLS2
 
-So, all I do is done in Ubuntu even if my machine is Windows. Therefore the project should
-also run in native Linux machines.
+So, all I do is done in Ubuntu even if my machine is Windows. Therefore the project should also run in native Linux machines.
 
 Additionally in Ubuntu I use the following:
 
-- Python 3.11
+- Python 3.13
 
-To install Python 3.11 and use the command ``python`` to start my Python 3.11 interpreter I use the
-following commands:
+To install Python 3.13 and use the command ``python`` to start my Python 3.13 interpreter I use the following commands:
 
 ::
 
-    sudo apt install python3.11
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1
+    sudo apt install python3.13
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.13 1
     sudo apt install python-is-python3
 
 After that you may run ``python`` and should get the following prompt:
@@ -39,26 +37,28 @@ After that you may run ``python`` and should get the following prompt:
 ::
 
     $ python
-    Python 3.11.0rc1 (main, Aug 12 2022, 10:02:14) [GCC 11.2.0] on linux
+    Python 3.13.0 (main, Oct  8 2024, 08:51:27) [GCC 13.2.0] on linux
     Type "help", "copyright", "credits" or "license" for more information.
-    >>> exit()
+    >>> exit
 
 - poetry
 
 As I do my projects dependency and package management with poetry I have to install Poetry with the
 following command according to
-`Installation <https://python-poetry.org/docs/#installing-with-the-official-installer>`_.
+`Installation <https://python-poetry.org/docs/#installing-with-pipx>`_.
 
 ::
 
-    curl -sSL https://install.python-poetry.org | python3 -
+    pipx install poetry
+    pipx ensurepath
+    poetry completions bash >> ~/.bash_completion
 
 After that you may check your poetry version with:
 
 ::
 
     $ poetry --version
-    Poetry (version 1.2.2)
+    Poetry (version 1.8.5)
 
 
 Initializing the Project
@@ -99,7 +99,7 @@ project:
     packages = [{include = "demo_patrikspiess"}]
 
     [tool.poetry.dependencies]
-    python = "^3.10"
+    python = ">=3.10, <4"
 
 
     [build-system]

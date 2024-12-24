@@ -20,3 +20,7 @@ So live a life you will remember.* -
 [Avicii](https://de.wikipedia.org/wiki/Avicii)
 
 ---
+
+> *A programmer can count to 10 with just two fingers*
+
+---

@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "demo_patrikspiess"
-version = "0.5.4"
+version = "1.0.0"
 description = "Demo project to try the package deployment"
 authors = ["Patrik Spiess <patrik.spiess@bluewin.ch>"]
 license = "MIT"
@@ -31,21 +31,21 @@ classifiers = [
 "Bug Tracker" = "https://github.com/patrikspiess/demo_patrikspiess/issues"
 
 [tool.poetry.dependencies]
-python = ">=3.9.0, <=3.13"
-rich = "~13.6.0"
-PyYAML = "~6.0.0"
+python = ">=3.10.0, <4"
+rich = ">=13.6.0"
+PyYAML = ">=6.0.0"
 
 [tool.poetry.group.dev.dependencies]
-pylint = "~3.0.0"
-mypy = "~1.5"
-types-PyYAML = "^6.0.12.2"
-black = "~24.03.0"
-tox = "^4.11.3"
+pylint = ">=3.0.0"
+mypy = ">=1.5"
+types-PyYAML = ">=6.0.12.2"
+black = ">=24.03.0"
+tox = ">=4.11.3"
 
 [tool.poetry.group.docs.dependencies]
 urllib3 = ">=2.2.2"
-sphinx = "^7.3.7"
-sphinx-rtd-theme = "^2.0.0"
+sphinx = ">=7.3.7"
+sphinx-rtd-theme = ">=2.0.0"
 
 [tool.poetry.scripts]
 demops = "demo_patrikspiess.main:main"
