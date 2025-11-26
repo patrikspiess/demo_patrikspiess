@@ -17,4 +17,3 @@ Autodoc-Demos
 #############
 
 .. autofunction:: demo_patrikspiess.demo.Demo.add_one
-.. autofunction:: io.open
