@@ -41,6 +41,7 @@ dev = [
     "black"
 ]
 docs = [
+    "tox",
     "sphinx",
     "sphinx-rtd-theme"
 ]
