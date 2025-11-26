@@ -1,4 +1,5 @@
-"""Do the main configuration
+"""
+Do the main configuration.
 
 This Module loads and defines the main Configuration for the tool. It is meant to load the
 configuration from a YAML file into a python dict.
@@ -47,7 +48,7 @@ from dataclasses import dataclass
 import yaml
 
 # Here I just define an example YAML. In the future I'll load that from a configuration file
-yaml_config: str = """
+YAML_CONFIG: str = """
 logging:
     -   type: log
         destination: hallo
@@ -64,15 +65,17 @@ logging:
         destination: file:log.txt
         level: debug
 """
-# yaml_config = ""  # If you uncomment this line it simulates an empty configuration file
+# YAML_CONFIG = ""  # If you uncomment this line it simulates an empty configuration file
 
 
 @dataclass
 class Config:
-    """the global config class"""
+    """
+    The global configuration class.
+    """
 
     # set default values
-    loaded_config = yaml.safe_load(yaml_config) or {}
+    loaded_config = yaml.safe_load(YAML_CONFIG) or {}
     logging = loaded_config.get("logging", [{"type": "log", "destination": "console"}])
 
 

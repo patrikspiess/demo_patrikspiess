@@ -2,14 +2,15 @@
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry]
+[project]
 name = "demo_patrikspiess"
-version = "1.0.1"
 description = "Demo project to try the package deployment"
-authors = ["Patrik Spiess <patrik.spiess@bluewin.ch>"]
+version = "1.0.2"
 license = "MIT"
+authors = [
+    { name = "Patrik Spiess", email = "patrik.spiess@bluewin.ch" },
+]
 readme = "README.md"
-repository = "https://github.com/patrikspiess/demo_patrikspiess"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Education",
@@ -20,34 +21,36 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Framework :: tox",
     "Framework :: Sphinx",
-    "Framework :: Sphinx :: Extension",
-    "Framework :: Sphinx :: Theme",
     "Topic :: Education",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Version Control :: Git"
 ]
 
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/patrikspiess/demo_patrikspiess/issues"
+requires-python = ">=3.10.0, <4"
+dependencies = [
+    "rich",
+    "PyYAML"
+]
 
-[tool.poetry.dependencies]
-python = ">=3.10.0, <4"
-rich = ">=13.6.0"
-PyYAML = ">=6.0.0"
+[project.optional-dependencies]
+dev = [
+    "tox",
+    "pylint",
+    "mypy",
+    "types-PyYAML",
+    "black"
+]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme"
+]
 
-[tool.poetry.group.dev.dependencies]
-pylint = ">=3.0.0"
-mypy = ">=1.5"
-types-PyYAML = ">=6.0.12.2"
-black = ">=24.03.0"
-tox = ">=4.11.3"
+[project.urls]
+repository = "https://github.com/patrikspiess/demo_patrikspiess"
+issues = "https://github.com/patrikspiess/demo_patrikspiess/issues"
 
-[tool.poetry.group.docs.dependencies]
-urllib3 = ">=2.2.2"
-sphinx = ">=7.3.7"
-sphinx-rtd-theme = ">=2.0.0"
 
-[tool.poetry.scripts]
+[project.scripts]
 demops = "demo_patrikspiess.main:main"
 
 [tool.pylint]
